@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.header{
+	background: rgba(0, 0, 0, 1);
+	color: white;
+	text-transform: uppercase;
+	display: flex;
+	height: 70px;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+.header__logo{
+	width: 30%;
+	text-align: center;
+    font-size: 30px;
+}
+span{
+	color: red;
+}
+.header__nav{
+	width: 70%;
+
+}
+.header__menu{
+	list-style-type: none;
+	display: flex;
+	width: 50%;
+    margin: auto;
+    justify-content: space-between;
+}
+.header__submenu{
+	position: relative;
+}
+.header__menu a{
+	text-decoration: none;
+	color: white;
+	transition: 1s;
+}
+.header__submenu ul{
+	background: rgba(0, 0, 0, 1.0);
+	display: none;
+	position: absolute;
+	left: -18px;
+	list-style: none;
+	padding: 10px 20px;
+	width: 160%;
+    top: 43px;
+
+}
+.header__submenu li{
+	padding: 10px 0;
+}
+.header__submenu:hover ul{
+	display: block;
+}
+.header__menu a:hover{
+	color: red;
+}
+.banner{
+	height: 100vh;
+	background: url(../img/bg1.jpg);
+	position: relative;
+}
+.banner__info{
+	width: 80%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	color: white;
+	top: 200px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+
+}
+.banner__info>div{
+	margin: 10px 0;
+}
+.banner__title{
+	font-size: 45px;
+}
+.banner__subtitle{
+	font-size: 38px;
+}
+.banner__text{
+	font-size: 30px;
+	color: grey;
+}
+.banner__btn{
+    background: rgb(210,17,17);
+    background: linear-gradient(90deg, rgba(210,17,17,0.5217437316723564) 7%, rgba(210,17,17,0) 100%);
+	position: absolute;
+	bottom: 200px;
+	padding: 10px 15px;
+	left: 10%;
+    border: none;
+    cursor: pointer;
+    
+
+}
+.banner__btn a{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+.articles{
+	height: 100vh;
+	background: lightgrey;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+    height: 107vh;
+}
+.articles__item{
+	height: 90%;
+	width: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.articles__item:not(.noBg) {
+	background: grey;
+}
+.articles__wrapper{
+	height: 90%;
+	width: 90%;
+	position: relative;
+}
+
+.tooltip {
+    position: relative;
+    left: 370px;
+    display: inline-block;
+  }
+  
+.tooltip .tooltiptext {
+    font-family: serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.articles__title{
+	font-weight: 700;
+	font-size: 20px;
+	margin: 15px 0;
+}
+.articles__text{
+	font-size: 14px;
+}
+.articles_img{
+	height: 350px;
+	position: relative;
+}
+.articles__item:nth-child(1) .articles_img{
+	background: url(../img/drumps.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.articles__item:nth-child(2) .articles_img{
+	background: url(../img/gituars.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 121%;
+    background-position: 0 -47px;
+}
+.articles__item:nth-child(3) .articles_img{
+	background: url(../img/drumps.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.articles__btn{
+    background: rgb(210,17,17);
+    background: red;
+    position: absolute;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    right: 121px;
+    bottom: -66px;
+    
+}
+.articles__btn a{
+	text-decoration: none;
+	color: white;
+
+}
+
+.fa-magnifying-glass-minus{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 1);
+	color: white;
+	text-transform: uppercase;
+	display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+	height: 70px;
+	align-items: center;
+	width: 100%;
+	top: 0;
+}
+
+.footer__logo{
+	width: 30%;
+	text-align: center;
+    font-size: 30px;
+}
+
+.footer__icon {
+    list-style-type: none;
+	display: flex;
+	width: 50%;
+    margin: auto;
+    justify-content: flex-end;
+    font-size: 30px;
+}
+
+.fa-square-twitter {
+    margin-right: 10px;
+}
+
+

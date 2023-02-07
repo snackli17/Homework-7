@@ -1,33 +1,97 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>Всплывающая подсказка на CSS</title>
-    <style>
-   .photo {
-    display: inline-block; /* Строчно-блочный элемент */
-    position: relative; /* Относительное позиционирование */
-    margin: 17px;
-    padding: 67px;
-    border: 2px solid grey;
-   }
-   .photo:hover::after {
-    content: attr(data-title); /* Выводим текст */
-    position: absolute; /* Абсолютное позиционирование */
-    left: 0; right: 0; bottom: 5px; /* Положение подсказки */
-    z-index: 1; /* Отображаем подсказку поверх других элементов */
-    background: rgba(0,42,167,0.6); /* Полупрозрачный цвет фона */
-    color: #fff; /* Цвет текста */
-    text-align: center; /* Выравнивание текста по центру */
-    font-family: Arial, sans-serif; /* Гарнитура шрифта */
-    font-size: 11px; /* Размер текста подсказки */
-    padding: 5px 10px; /* Поля */
-    border: 1px solid #333; /* Параметры рамки */
-   }
-  </style>
- </head>
- <body>
-   <div class="photo" data-title="drumps"><img src="./img/drumps.jpg" alt="" width="300px"></div>
-   <div class="photo" data-title="gituars"><img src="./img/gituars.jpg" alt="" width="300px"></div>
- </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/task3.css">
+	<link rel="stylesheet" href="./libs/fontawesome-free-6.2.1-web/css/all.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__logo">
+			<span>Wasted</span> releases
+		</div>
+		<nav class="header__nav">
+			<ul class="header__menu">
+				<li><a href="#">about</a></li>
+				<li class="header__submenu"><a href="#">relesases<i class="fa-solid fa-bars"></i>
+					<ul>
+						<li><a href="">Some release</a></li>
+						<li><a href="">Some release</a></li>
+						<li><a href="">Some release</a></li>
+						<li><a href="">Some release</a></li>
+						<li><a href="">Some release</a></li>
+					</ul></a></li>
+				<li><a href="#">contacts</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="banner">
+		<div class="banner__info">
+			<div class="banner__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+			<div class="banner__subtitle">Lorem ipsum dolor sit amet</div>
+			<div class="banner__text">Lorem, ipsum dolor</div>
+		</div>
+		<button class="banner__btn"><a href="">learn more</a></button>
+	</section>
+	<section class="articles">
+
+		<article class="articles__item">
+			<div class="articles__wrapper">
+				<div class="articles_img"><i class="tooltip fa-solid fa-magnifying-glass-minus"><span class="tooltiptext">Lorem ipsum dolor sit amet.</span></i>
+                    
+                </div>
+                
+				<div class="articles__title">Lorem ipsum dolor sit</div>
+				<div class="articles__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Loremasd, ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil consequatur esse obcaecati numquam mollitia, quaerat amet nam placeat blanditiis unde reprehenderit incidunt, ut, a. Distinctio, ea explicabo amet similique </div>
+				<button class="articles__btn"><a href="#">Learn more</a></button>
+			</div>
+		</article>
+
+		<article class="articles__item noBg">
+			<div class="articles__wrapper">
+				<div class="articles_img"></div>
+				<div class="articles__title">Lorem, ipsum dolor sit amet con</div>
+				<div class="articles__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil consequatur esse obcaecati numquam mollitia, quaerat amet nam placeat blanditiis unde reprehenderit incidunt, ut, a. Distinctio, ea explicabo amet similique.</div>
+				<button class="articles__btn"><a href="#">Learn more</a></button>
+			</div>
+		</article>
+
+
+		<article class="articles__item">
+			<div class="articles__wrapper">
+				<div class="articles_img"></div>
+				<div class="articles__title">Lorem ipsum dolor sit</div>
+				<div class="articles__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil consequatur esse obcaecati numquam mollitia, quaerat amet nam placeat blanditiis unde reprehenderit incidunt, ut, a. Distinctio, ea explicabo amet similique.</div>
+				<button class="articles__btn"><a href="#">Learn more</a></button>
+			</div>
+		</article>
+	</section>
+    <footer class="footer">
+        <div class="footer__logo">
+            <span>Wasted</span> releases
+        </div>
+        <div class="footer__icon">
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+        </div>
+    </footer>
+</body>
 </html>
